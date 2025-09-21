@@ -1,3 +1,4 @@
+/* Step 1 block */
 .gs-section-01 {
   background: #fff9e6;
   border-left: 4px solid #f0b400;
@@ -5,6 +6,24 @@
   margin: 18px 0;
   border-radius: 8px;
 }
-.gs-section-01 h3 {
-  margin-top: 0;
+.gs-section-01 h3 { color: #b27c00; margin-top: 0; }
+
+/* Step 2 block */
+.gs-section-02 {
+  background: #eaf7ff;
+  border-left: 4px solid #0c7bdc;
+  padding: 16px 18px;
+  margin: 18px 0;
+  border-radius: 8px;
 }
+.gs-section-02 h3 { color: #0c5fb0; margin-top: 0; }
+
+/* Step 3 block */
+.gs-section-03 {
+  background: #f1f1f1;
+  border-left: 4px solid #666;
+  padding: 16px 18px;
+  margin: 18px 0;
+  border-radius: 8px;
+}
+.gs-section-03 h3 { color: #444; margin-top: 0; }
