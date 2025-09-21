@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+    {% if page.image %}
+      <p><img src="{{ page.image }}" alt="comparison image"></p>
+    {% endif %}
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Strengths</th>
+          <th>Weaknesses</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% assign people = "reynolds,gosling" | split: "," %}
+        {% for key in people %}
+          {% assign data = page[key] %}
+          {% if data %}
+          <tr>
+            <td>{{ key | capitalize }}</td>
+            <td>
+              <ul>
+                {% for item in data.strengths %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+            <td>
+              <ul>
+                {% for item in data.weaknesses %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {{ content }}
+  </article>
+</div>
